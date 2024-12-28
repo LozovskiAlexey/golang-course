@@ -29,6 +29,8 @@ jobs:
             uses: actions/setup-go@v5
             with:
               go-version: ${{ matrix.go-version }}
+          - name: Install dependencies
+            run: go get github.com/LozovskiAlexey/golang-course/tree/lab-1-console-tree/tree
           - name: Build
             run: go build -v ./...
           - name: Test with the Go CLI
