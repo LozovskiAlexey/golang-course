@@ -23,6 +23,7 @@ jobs:
       matrix:
         go-version: [ '1.17']
 
+    # Added dependencies
     steps:
           - uses: actions/checkout@v4
           - name: Setup Go
