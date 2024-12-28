@@ -31,6 +31,8 @@ jobs:
             with:
               go-version: ${{ matrix.go-version }}
           - name: Build
-            run: go build -v ./..
-          - name: Test with the Go CLI
+            working-directory: ./tree
+            run: go build -v 
+          - name: Test
+            working-directory: ./tree
             run: go test -v
